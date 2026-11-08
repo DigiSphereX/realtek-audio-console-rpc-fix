@@ -1,0 +1,19 @@
+# Local logs / generated files
+*.log
+*.tmp
+*.bak
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vs/
+.vscode/
+.idea/
+
+# Release staging
+/dist/
+/release/
+*.zip

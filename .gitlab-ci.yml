@@ -1,0 +1,14 @@
+# GitLab CI - lightweight syntax/lint checks for a PowerShell project.
+# The repair itself only runs on Windows; this pipeline validates the files.
+
+stages:
+  - validate
+
+powershell-parse:
+  stage: validate
+  image: mcr.microsoft.com/powershell:latest
+  script:
+    - pwsh -NoProfile -Command "$errors = $null; [System.Management.Automation.Language.Parser]::ParseFile('src/Fix-RealtekAudioConsole.ps1', [ref]$null, [ref]$errors) | Out-Null; if ($errors.Count) { $errors | ForEach-Object { Write-Error $_.Message }; exit 1 } else { Write-Host 'Parse OK' }"
+  only:
+    - main
+    - merge_requests
