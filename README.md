@@ -1,10 +1,12 @@
 # Realtek Audio Console RPC Fix
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-0070BA)](https://www.paypal.com/donate/?hosted_button_id=CFANQH892RPH2)
+[![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg?style=for-the-badge)](LICENSE)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-brightgreen.svg?style=for-the-badge)](https://github.com/DigiSphereX/realtek-audio-console-rpc-fix/releases/latest)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-0070BA.svg?style=for-the-badge)](https://www.paypal.com/donate/?hosted_button_id=CFANQH892RPH2)
+
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-5391FE)
 ![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 
 One-click repair for the **Realtek Audio Console** error:
 
@@ -28,7 +30,7 @@ without reinstalling the audio driver.
 - Verifies the result and prints a clear `OK / PROBLEM` report.
 - Is idempotent and reversible (`-Action Restore`).
 
-## The problem
+## The Problem
 
 Realtek Audio Console is a UWP application. It does not talk to the audio driver
 directly. It talks to a small per-user COM/RPC helper:
@@ -100,7 +102,7 @@ RtkAudUService64_BG (logon task)   PROBLEM  State=Disabled Enabled=False
 RPC helper in user session         PROBLEM  not running
 Windows Audio services             OK       Audiosrv=Running, AudioEndpointBuilder=Running
 Realtek Audio Console package      OK       v1.1.137.0 / Ok
-Realtek audio endpoints            OK       Lautsprecher (Realtek(R) Audio)=OK
+Realtek audio endpoints            OK       Speakers (Realtek(R) Audio)=OK
 
 Result: 2 problem(s) found. Run with -Action Fix to repair.
 ```
@@ -174,13 +176,15 @@ The author is not responsible for any unintentional damage or data loss.
 
 ## License
 
-MIT - see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
 
 Copyright (c) 2026 M. Basheer (DigiSphereX)
+
+---
 
 ## ☕ Support this project
 
 Free and open source (MIT). If this project saved you time or money, consider a small thank-you:
 
-- **GitHub Sponsors** -> https://github.com/sponsors/DigiSphereX
-- **PayPal** -> https://www.paypal.com/donate/?hosted_button_id=CFANQH892RPH2
+- [GitHub Sponsors](https://github.com/sponsors/DigiSphereX)
+- [PayPal](https://www.paypal.com/donate/?hosted_button_id=CFANQH892RPH2)
